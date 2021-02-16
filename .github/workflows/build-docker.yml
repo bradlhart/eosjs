@@ -24,6 +24,8 @@ jobs:
         with:
           context: ./.github/eosjs-ci
           file: ./.github/eosjs-ci/Dockerfile
+          pull: true
+          push: true
           tags: |
             bradlhart/eosjs-ci:latest
             bradlhart/eosjs-ci:${{ github.sha }}
