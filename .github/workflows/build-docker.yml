@@ -22,6 +22,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@4a531fa5a603bab87dfa56578bd82b28508c9547
         with:
+          context: ./.github/eosjs-ci
           file: ./.github/eosjs-ci/Dockerfile
           tags: |
             bradlhart/eosjs-ci:latest
