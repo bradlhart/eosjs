@@ -26,4 +26,4 @@ jobs:
           file: ./.github/eosjs-ci/Dockerfile
           tags: |
             bradlhart/eosjs-ci:latest
-            bradlhart/eosjs-ci:${{GITHUB_SHA}}
+            bradlhart/eosjs-ci:${{ github.sha }}
