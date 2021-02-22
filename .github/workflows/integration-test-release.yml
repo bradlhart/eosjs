@@ -1,7 +1,5 @@
 name: Integration Test - Release
-on:
-  schedule:
-    - cron: "0 3 * * *"
+on: workflow_dispatch
 
 jobs:
   integration-test:
@@ -42,7 +40,7 @@ jobs:
           spec: cypress/integration/index.spec.js
     services:
       nodeos:
-        image: eosio/eosjs-ci:release_22.0.x
+        image: bradlhart/eosjs-ci:release_22.0.x
 
         ports:
           - 8888:8888

@@ -1,7 +1,5 @@
 name: Build Docker - Develop
-on:
-  schedule:
-    - cron: "0 2 * * *"
+on: workflow_dispatch
 
 jobs:
   build-docker:
@@ -30,5 +28,5 @@ jobs:
           pull: true
           push: true
           tags: |
-            eosio/eosjs-ci:develop
-            eosio/eosjs-ci:${{ github.sha }}
+            bradlhart/eosjs-ci:develop
+            bradlhart/eosjs-ci:${{ github.sha }}

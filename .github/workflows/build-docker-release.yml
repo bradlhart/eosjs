@@ -1,7 +1,5 @@
 name: Build Docker - Release
-on:
-  schedule:
-    - cron: "0 2 * * *"
+on: workflow_dispatch
 
 jobs:
   build-docker:
@@ -33,5 +31,5 @@ jobs:
             EOSBRANCH=release_2.1.x
             CDTBRANCH=release_1.8.x
           tags: |
-            eosio/eosjs-ci:release_22.0.x
-            eosio/eosjs-ci:${{ github.sha }}
+            bradlhart/eosjs-ci:release_22.0.x
+            bradlhart/eosjs-ci:${{ github.sha }}
